@@ -1,0 +1,199 @@
+::-webkit-scrollbar {
+  display: none;
+}
+
+
+html {
+  scrollbar-width: none;
+}
+
+body {
+  color: #EDF2F4;
+  background-color: #000;
+  overflow: hidden;
+}
+
+
+
+
+.navbar {
+  background-color: #0e31fd;
+  border-bottom: 5px solid #0e31fd;
+}
+
+.nav-button {
+  border: none;
+  color: #fff;
+  transition: 0.5s;
+}
+.nav-button:hover {
+  color: #000;
+}
+
+
+.platform-content {
+  margin-top: 100px;
+  max-height: calc(100vh - 100px);
+}
+
+
+.sidebar {
+  background-color: #ffffff;
+  height: calc(100vh - 101px);  
+}
+.sidebar button {
+  color: #000;
+  border: none;
+  font-size: 100%;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  padding: 0;
+  background-color: #fff;
+  transition: 0.5s;
+  width: fit-content;
+}
+.sidebar button:hover {
+  color: #0e31fd;
+}
+
+#hamburger-menu {
+  height: 100vh;
+  max-width: 50vw;
+}
+
+
+
+/* MESSAGE STREAM */
+.email-stream {
+  background-color: #000;
+  max-height: calc(100vh - 100px);
+  overflow-y: scroll;
+}
+.message-stream {
+  color: #EDF2F4;
+  height: 100VH;
+}
+/* set background of email select cards and box shadow on hover*/
+.email-select {
+  background-color: #979bb1;
+  transition: 0.2s;
+}
+.email-select:hover {
+  background-color: #0d46e1;
+  box-shadow: 0 0 5px 5px #Edf2f4;
+}
+
+
+
+/* READ EMAIL */
+.email-read {
+  border-left: 15px solid#0e31fd;
+  background-color: #EDF2F4;
+  color: #000;
+  height: calc(100vh - 100px);
+  overflow-y: scroll;
+  
+}
+.email-respond-button {
+  background-color:#000;
+  color:#EDF2F4
+}
+#email-respond {
+  border: 5px solid #000;
+}
+
+
+
+
+
+#dot-menu {
+  margin-top: 101px;
+  background-color: #000;
+}
+/* Fullscreen */
+@media screen and (max-width: 6000px ) {
+  #dot-menu {
+      min-width: 50%;
+  }
+}
+/* Tablet */
+@media screen and (max-width: 1024px ) {
+  #dot-menu {
+      min-width: 83.5%;
+  }
+}
+/* Mobile */
+@media screen and (max-width: 480px) {
+  #dot-menu {
+      min-width: 100%;
+  }
+}
+#profile-picture {
+  font-size: 3.5em;
+}
+#user-profile {
+  color: #EDF2F4;
+  transition: 0.3s;
+}
+#user-profile:hover {
+  color: #edf2f47e;
+}
+#option-selection button {
+  background-color: #000;
+  border: none;
+  color: #EDF2F4;
+  transition: 0.5s;
+  font-size: 100%;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  padding: 0;
+}
+#option-selection button:hover {
+  color: #EDF2F47e;
+}
+
+
+/* Exit Button */
+.exit-button {
+  background-color: #000;
+  color: #EDF2F4;
+  border: none;
+  transition: 0.3s;
+}
+.exit-button:hover {
+  color: #e0eeee;
+}
+
+
+/* Compose Button */
+#compose-button, #email-send-button {
+  margin-left: 115px;
+  margin-bottom: 20px;
+  background-color: #e0eeee;
+  color: #000;
+  border: none;
+  transition: 0.3s;
+}
+#compose-button:hover, #email-send-button:hover {
+  background-color: #838b8b;
+  color: #000;
+  border: none;
+}
+
+
+
+
+/* Send New Email */
+#email-new {
+  background-color: #0e31fd;
+  color: #EDF2F4;
+  width: 75%;
+  height: 60%;
+
+}
+.compose-exit-button {
+  background-color: #0e31fd;
+  color: #EDF2F4;
+  border: none;
+}
+.compose-exit-button:hover {
+  color: #000;
+}

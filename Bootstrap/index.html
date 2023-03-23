@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C Mail</title>
+    <link rel="icon" href="C Mail.png" type="icon/x-icon">
+    
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    
+   
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+    <script src="https://kit.fontawesome.com/7b3767815e.js" crossorigin="anonymous"></script>
+    
+    <!-- style sheet link -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+    <!-- NAV -->
+    <nav class="container-fluid navbar position-fixed top-0 h-10 justify-content-around">
+        
+        <!-- OPENS SIDE BAR Collapsable Hamburger menu -->
+        <button class="col-1 d-md-none navbar nav-button p-0 justify-content-center" type="button" data-bs-toggle="offcanvas" data-bs-target="#hamburger-menu">
+            <span class="p-0"><h2><i class="fa-solid fa-bars"></i></h2></span>
+        </button>
+        
+        <div class="col-4 d-flex justify-content-center align-items-center">
+            <!-- symbol -->
+            <a class="navbar-brand logo m-0 p-0 me-3" href="#">
+                <img src="C Mail.png" alt="logo" width="60px">
+            </a>
+            <!-- logo name collapses and expands based on breakpoint -->
+            <ul class="navbar-nav d-none d-md-block">
+                <li>
+                    <h3>C Mail</h3>
+                </li>
+            </ul>
+        </div>
+
+        <!-- SEARCH BAR -->
+        <form class="col-5 d-flex justify-content-end me-0">
+            <input type="search" class="form-control me-2" placeholder="Search...">
+            <button class="btn btn-primary " type="submit">Search</button>
+        </form>
+
+        <!-- OPENS OPTION  -->
+        <button class="col-1 navbar p-0 nav-button justify-content-center" data-bs-toggle="collapse" data-bs-target="#dot-menu">
+            <span class="p-0"><h2><i class="fa-solid fa-ellipsis-vertical"></i></h2></span>
+        </button>
+    
+
+        
+    </nav>
+
+    <!-- 3 dot menu -->
+    <div class="collapse position-absolute end-0 top-0 pb-3" id="dot-menu">
+        <div class="container-fluid">
+            <div class="row">
+                <!-- button to close dot menu -->
+                <div class="d-flex justify-content-end">
+                    <button class="col-1 float-end exit-button" data-bs-toggle="collapse" data-bs-target="#dot-menu">
+                        <span class="p-0"><h2><i class="fa-regular fa-circle-xmark"></i></i></h2></span>
+                    </button>
+                </div>
+            </div>
+            <div class="row d-flex justify-content-center">
+                <div class="col-8 col-md-4 order-xl-2 p-0 profile">
+                    <div class="container">
+                        <div class="row d-flex justify-content-center" id="user-profile">
+                            <!-- profile picture -->
+                            <div class="col-4 col-md-8 d-flex align-items-center justify-content-center p-0" id="profile-picture">
+                                <p><i class="fa-solid fa-circle-user"></i></p>
+                            </div>
+                            <!-- username -->
+                            <div class="col-8 d-flex justify-content-center align-items-center p-0">
+                                <h2 class="lh-1">USER</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-8 options d-flex align-items-center" id="option-selection">
+                    <div class="container">
+                        <div class="row d-flex justify-content-center text-nowrap">
+                            
+                            <div class="col-8 col-lg-4 text-center">
+                                <button>Manage Preferences</button>
+                            </div>
+                            <div class="col-8 col-lg-4 d-flex justify-content-center">
+                                <button>Change account</button>
+                            </div>
+                            <div class="col-8 col-lg-4 d-flex justify-content-center">
+                                <button>Sign acount</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Platform -->
+    <div class="container-fluid platform-content">
+        <div class="row">
+            <!-- MENU -->
+            <div class="col offcanvas-md offcanvas-start col-md-2 col-xl-2 sidebar" id="hamburger-menu">
+                <div class="row d-flex d-md-none justify-content-end p-3 g-0">
+                    <!-- button to close dot menu -->
+                    <div class="col-2  d-md-none">
+                        <div>
+                            <button class="col-1 float-end exit-button" data-bs-toggle="offcanvas" data-bs-target="#hamburger-menu">
+                                <span class="p-0"><h2><i class="fa-regular fa-circle-xmark"></i></i></h2></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row e">
+                    <div class="d-flex flex-column justify-content-around m-0 py-5 sidebar">
+                        <button class="d-flex justify-content-start">Inbox</button>
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col d-flex justify-content-around">
+                                    <button class="d-flex justify-content-around">Primary</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col d-flex justify-content-around">
+                                    <button class="d-flex justify-content-around">Important</button>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="d-flex">Bookmarks</button>
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col d-flex justify-content-around">
+                                    <button class="d-flex justify-content-around">Snoozed</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col d-flex justify-content-around">
+                                    <button class="d-flex justify-content-around">Promotions</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col d-flex justify-content-around">
+                                    <button class="d-flex justify-content-around">Social</button>
+                                </div>
+                            </div>
+                        </div> 
+                        <button class="d-flex">Sent</button>
+                        <button class="d-flex">Spam</button>
+                        <button class="d-flex">Draft</button>
+                        <button class="d-flex">Trash</button>
+                        <button type="button" class="d-none d-xl-flex" data-bs-toggle="offcanvas" data-bs-target="#email-new"><i class="fa-solid fa-pencil"></i> Compose</button>
+                        
+                        
+
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Message -->
+            <div class="col flex-grow-2 email-stream p-3">
+                <div class="container position-absolute bottom-0 start-0 translate-middle-y">
+                    <div class="row">
+                        <div class="col d-xl-none">
+                            <button type="button" class="btn-lg btn-primary btn" id="compose-button" data-bs-toggle="offcanvas" data-bs-target="#email-new">
+                                <i class="fa-solid fa-pencil"></i> Compose
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="container message-stream">
+                    <div class="row">
+                        <div class="col email-select-container">
+                            <div class="container email-select mt-2 mb-2">
+                                <div class="row">
+                                    <!-- sender -->
+                                    <div class="col-8">
+                                        <h5>Recipient</h5>
+                                    </div>
+                                    <!-- time/date -->
+                                    
+                                    <div class="col-2 col-md-5">
+                                        <h7>TIME/DATE</h7>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <!-- subject matter -->
+                                    <div class="coloumn">
+                                    <h3>SUBJECT</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col email-select-container">
+                            <div class="container email-select mt-2 mb-2">
+                                <div class="row">
+                                    <!-- sender -->
+                                    <div class="col-8">
+                                        <h5>Recipient</h5>
+                                    </div>
+                                    <!-- time/date -->
+                                    
+                                    <div class="col-2 col-md-5">
+                                        <h7>TIME/DATE</h7>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <!-- subject matter -->
+                                    <div class="coloumn">
+                                    <h3>SUBJECT</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><div class="row">
+                        <div class="col email-select-container">
+                            <div class="container email-select mt-2 mb-2">
+                                <div class="row">
+                                    <!-- sender -->
+                                    <div class="col-8">
+                                        <h5>Recipient</h5>
+                                    </div>
+                                    <!-- time/date -->
+                                    
+                                    <div class="col-2 col-md-5">
+                                        <h7>TIME/DATE</h7>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <!-- subject matter -->
+                                    <div class="coloumn">
+                                    <h3>SUBJECT</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><div class="row">
+                        <div class="col email-select-container">
+                            <div class="container email-select mt-2 mb-2">
+                                <div class="row">
+                                    <!-- sender -->
+                                    <div class="col-8">
+                                        <h5>Recipient</h5>
+                                    </div>
+                                    <!-- time/date -->
+                                    
+                                    <div class="col-2 col-md-5">
+                                        <h7>TIME/DATE</h7>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <!-- subject matter -->
+                                    <div class="coloumn">
+                                    <h3>SUBJECT</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><div class="row">
+                        <div class="col email-select-container">
+                            <div class="container email-select mt-2 mb-2">
+                                <div class="row">
+                                    <!-- sender -->
+                                    <div class="col-8">
+                                        <h5>Recipient</h5>
+                                    </div>
+                                    <!-- time/date -->
+                                    
+                                    <div class="col-2 col-md-5">
+                                        <h7>TIME/DATE</h7>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <!-- subject matter -->
+                                    <div class="coloumn">
+                                    <h3>SUBJECT</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><div class="row">
+                        <div class="col email-select-container">
+                            <div class="container email-select mt-2 mb-2">
+                                <div class="row">
+                                    <!-- sender -->
+                                    <div class="col-8">
+                                        <h5>Recipient</h5>
+                                    </div>
+                                    <!-- time/date -->
+                                    
+                                    <div class="col-2 col-md-5">
+                                        <h7>TIME/DATE</h7>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <!-- subject matter -->
+                                    <div class="coloumn">
+                                    <h3>SUBJECT</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><div class="row">
+                        <div class="col email-select-container">
+                            <div class="container email-select mt-2 mb-2">
+                                <div class="row">
+                                    <!-- sender -->
+                                    <div class="col-8">
+                                        <h5>Recipient</h5>
+                                    </div>
+                                    <!-- time/date -->
+                                    
+                                    <div class="col-2 col-md-5">
+                                        <h7>TIME/DATE</h7>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <!-- subject matter -->
+                                    <div class="coloumn">
+                                    <h3>SUBJECT</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><div class="row">
+                        <div class="col email-select-container">
+                            <div class="container email-select mt-2 mb-2">
+                                <div class="row">
+                                    <!-- sender -->
+                                    <div class="col-8">
+                                        <h5>Recipient</h5>
+                                    </div>
+                                    <!-- time/date -->
+                                    
+                                    <div class="col-2 col-md-5">
+                                        <h7>TIME/DATE</h7>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="coloumn">
+                                    <h3>SUBJECT</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><div class="row">
+                        <div class="col email-select-container">
+                            <div class="container email-select mt-2 mb-2">
+                                <div class="row">
+                                    <!-- sender -->
+                                    <div class="col-8">
+                                        <h5>Recipient</h5>
+                                    </div>
+                                    <!-- time/date -->
+                                    
+                                    <div class="col-2 col-md-5">
+                                        <h7>TIME/DATE</h7>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="coloumn">
+                                    <h3>SUBJECT</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- READ EMAIL -->
+            <div class="col col-xl-6 d-none d-xl-block email-read pt-4 ">
+                <div class="d-flex flex-column">
+                    <div class="container">
+                        <div class="row">
+                            <!-- sender -->
+                            <div class="col-8">
+                                <h5>Kanye West</h5>
+                            </div>
+                            <div class="col-2 col-md-5">
+                                <h7>4:15 am</h7>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="coloumn">
+                            <h3>Heartless</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="email-body">
+                        <p>In the night I hear 'em talk
+                            The coldest story ever told
+                            Somewhere far along this road
+                            He lost his soul to a woman so heartless
+                            How could you be so heartless?
+                            Oh, how could you be so heartless?
+                            How could you be so, cold as the winter wind when it breeze, yo
+                            Just remember that you talkin' to me though
+                            You need to watch the way you talkin' to me, yo
+                            I mean after all the things that we've been through
+                            I mean after all the things we got into
+                            Ayo, I know of some things that you ain't told me
+                            Ayo, I did some things, but that's the old me<br>And now you wanna get me back and you gon' show me
+                            So you walk around like you don't know me
+                            You got a new friend, well, I got homies
+                            But in the end it's still so lonely
+                            In the night I hear 'em talk
+                            The coldest story ever told
+                            Somewhere far along this road
+                            He lost his soul to a woman so heartless
+                            How could you be so heartless?
+                            Oh, how could you be so heartless?
+                            How could be so Dr. Evil?
+                            You bringin' out a side of me that I don't know
+                            I decided we weren't gon' speak so
+                            Why we up 3:00 a.m. on the phone?
+                            Why do she be so mad at me for?
+                            Homie, I don't know, she's hot and cold
+                            I won't stop, won't mess my groove up
+                            'Cause I already know how this thing go<br>You run and tell your friends that you're leaving me (hey)
+                            They say that they don't see what you see in me (hey)
+                            You wait a couple months then you gon' see (hey)
+                            You'll never find nobody better than me
+                            In the night I hear 'em talk
+                            The coldest story ever told
+                            Somewhere far along this road
+                            He lost his soul to a woman so heartless
+                            How could you be so heartless?
+                            Oh, how could you be so heartless?
+                            Talk and talk and talk and talk
+                            Baby let's just knock it off
+                            They don't know what we been through
+                            They don't know 'bout me and you
+                            So I got something new to see
+                            And you just gon' keep hatin' me
+                            And we just gon' be enemies
+                            I know you can't believe
+                            I could just leave it wrong
+                            And you can't make it right
+                            I'm gon' take off tonight
+                            Into the night
+                            In the night I hear 'em talk
+                            The coldest story ever told
+                            Somewhere far along this road
+                            He lost his soul to a woman so heartless
+                            How could you be so heartless?
+                            Oh, how could you be so heartless?</p>
+                    </div>
+                    
+                    <form>
+                        <label for="email-respond" class="form-label ps-3">Respond</label>
+                        <textarea id="email-respond" name="respond" class="form-control"  placeholder="Reply..." rows="5"></textarea>
+                        <div class="d-flex flex-row-reverse me-4">
+                            <button class="email-respond-button" type="submit" >SEND</button>
+                        </div>                    
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>    
+
+
+
+    
+    <div class="offcanvas m-50" id="email-new">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasLabel">Compose Email</h5>
+            <button type="button" class="text-reset compose-exit-button" data-bs-dismiss="offcanvas">
+                <span class="p-0"><h2><i class="fa-regular fa-circle-xmark"></i></i></h2></span>
+            </button>
+          </div>
+        <!-- form -->
+        <div class="offcanvas-body">
+        <form class="container email-send m-2">
+            <!-- "recipient" -->
+            <div class="form-group mb-5">
+                <label for="email-recipient">Recipient</label>
+                <!-- email field with placeholder -->
+                <input type="email" class="form-control" id="email-recipient" placeholder="Email address">
+                <!-- "subject" -->
+                <label for="email-subject">Subject</label>
+                <!-- subject field with placeholder -->
+                <input class="form-control" id="email-subject" placeholder="Subject matter">
+            </div>
+
+            <div class="form-group">
+                <!-- "message" -->
+                <label for="email-message">Message</label>
+                <!-- message field with "type message..." placeholder -->
+                <textarea rows="6" id="email-message" name="message" class="form-control" placeholder="Type message..."></textarea>
+            </div>
+
+            <!-- send button that closes window in bottom right corner [closes modal/offcanvas] -->
+            <div class="container">
+                <div class="row justify-content-end">
+                    <div class="col offset-11">
+                        <button type="submit" class="btn-lg btn" id="email-send-button">SEND</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+        </div>
+    </div>
+
+
+
+
+    <!-- BOOTSTRAP JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script></body>
+</html>
+
+<!--ye-->
